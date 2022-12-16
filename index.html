@@ -9,7 +9,7 @@
     <!-- 
         Examen Primer Trimestre Desarrollo de Aplicaciones Web
         Rafael Tienda Gonzalez
-        Url:
+        Url: https://rtienda.github.io/Examen_Desarrollo_Web_Cliente_Primer_trimestre/index.html
      -->
 </head>
 <body id="cuerpo"> 
@@ -52,6 +52,7 @@
     <!-- Codigo de javascript que queremos que cargue despues del html ya que necesitaremos
         acceder al contenido para poder editar tanto el texto como introducir la funcionalidades del audio -->
     <script>
+        // Esto nos permitira cambiar el texto a los 6 segundos de cargar la pagina
         setTimeout(cambiaTexto,6000);
 
         function cambiaTexto(){
@@ -59,11 +60,12 @@
             element.innerHTML = '<p class="texto">Haz Click Aqui</p>';
         }
 
-            // Primero, obtenemos una referencia al div y al elemento de audio
-            var playButton = document.getElementById("cuerpo");
+        // Primero, obtenemos una referencia al div y al elemento de audio
+        var playButton = document.getElementById("cuerpo");
         var audioElement = document.getElementById("audio");
 
-        // Luego, agregamos un controlador de eventos al div que reproduzca la canción cuando se haga clic en él
+        // Luego, agregamos un controlador de eventos al div que reproduzca o pause
+        // la canción cuando se haga clic en él
         playButton.addEventListener("click", function() {
             if(audioElement.paused){
                 audioElement.play();
