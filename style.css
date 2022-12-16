@@ -11,8 +11,26 @@ body{
     align-items: center;
     justify-content:flex-end;
     overflow: hidden;
+    /* transition: background 1s; */
+
 
 }
+@media  (orientation:portrait) {
+.clase{
+    background:transparent;
+    /* background-size: fill; */
+
+    /* background-color: red; */
+    /* z-index: -1; */
+    /* overflow: hidden; */
+}
+}
+/* body.transparent{
+    opacity: 0;
+    background: transparent;
+    background-image: none;
+
+} */
 
 @media  (orientation:landscape) {
     body {
@@ -29,7 +47,6 @@ body{
     }
 }
 
-
 #Box1{
     visibility: hidden;
     display: flex;
@@ -43,8 +60,8 @@ body{
     flex-direction: column;
 }
 
-#texto{
-    font-size: clamp(15px,4vw,40px);
+p{
+    font-size: clamp(15px,2vw,40px);
     margin: 4px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -64,6 +81,10 @@ img{
     left: 0;
     bottom: 0;
     
+}
+.claseTransparente{
+    visibility: hidden;
+  transition: visibility 1s;
 }
 
 .renoIzquierdaMovil{

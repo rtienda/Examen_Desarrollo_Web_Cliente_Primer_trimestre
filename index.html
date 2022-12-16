@@ -9,7 +9,6 @@
    
 </head>
 <body id="cuerpo"> 
-    <!-- <div id="pincha"><p>Pincha Aqui!</p></div> -->
 
     <div class="window" id="windowId">
         <div class="santa">
@@ -33,7 +32,7 @@
     </div>
     <div class="message">
     </div></div> 
-    <div id="Box1"><p id="texto">Felices Fiestas te desea Rafa</p>
+    <div id="Box1"><p id="texto" class="texto">Felices Fiestas te desea Rafa</p>
        
     
     <div id="renos">
@@ -42,6 +41,26 @@
     </div>
     <script type="text/javascript" src="script.js"></script>
     <audio loop id="audio" src="Padoru.mp3"></audio>
+    <script>
+        setTimeout(cambiaTexto,6000);
 
+        function cambiaTexto(){
+            const element = document.getElementById('texto');
+            element.innerHTML = '<p class="texto">Haz Click Aqui</p>';
+        }
+
+            // Primero, obtenemos una referencia al div y al elemento de audio
+            var playButton = document.getElementById("cuerpo");
+        var audioElement = document.getElementById("audio");
+
+        // Luego, agregamos un controlador de eventos al div que reproduzca la canción cuando se haga clic en él
+        playButton.addEventListener("click", function() {
+            if(audioElement.paused){
+                audioElement.play();
+            }else{
+                audioElement.pause();
+            }
+        });
+    </script>
 </body>
 </html>
