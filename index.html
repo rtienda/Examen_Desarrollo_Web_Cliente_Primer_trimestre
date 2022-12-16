@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-   
+    <!-- 
+        Examen Primer Trimestre Desarrollo de Aplicaciones Web
+        Rafael Tienda Gonzalez
+        Url:
+     -->
 </head>
 <body id="cuerpo"> 
-
+    <!-- Aqui definimos el conjunto html del Papa Noel -->
     <div class="window" id="windowId">
         <div class="santa">
           <div class="head">
@@ -32,15 +36,21 @@
     </div>
     <div class="message">
     </div></div> 
+    <!-- Aqui definimos el div que contendra ambos de nuestros textos -->
     <div id="Box1"><p id="texto" class="texto">Felices Fiestas te desea Rafa</p>
        
-    
+    <!-- Definimos el contenedor y los renos en cada esquina de manera absolute -->
     <div id="renos">
     <div id="renoIzq"><img src="pngwingizq.png" alt="" ></div>
     <div id="renoDch"><img src="pngwing.png" alt=""></div>
     </div>
+    <!-- Importamos el codigo javascript que cargará antes que el html -->
     <script type="text/javascript" src="script.js"></script>
+    <!-- Insertamos la pista de audio en bucle en la pagina -->
     <audio loop id="audio" src="Padoru.mp3"></audio>
+
+    <!-- Codigo de javascript que queremos que cargue despues del html ya que necesitaremos
+        acceder al contenido para poder editar tanto el texto como introducir la funcionalidades del audio -->
     <script>
         setTimeout(cambiaTexto,6000);
 
